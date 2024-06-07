@@ -10,26 +10,31 @@ namespace TODO4SD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("TODO4SD");
+            Console.WriteLine("TODO4SD 1.0");
             Console.WriteLine("Fast TODO list for Service Desk");
             Console.WriteLine("Current date: " + DateTime.Now);
             Console.WriteLine();
 
-            Console.Write("Write your first task here: ");
-            var userTodo = Console.ReadLine();
-            Console.WriteLine(userTodo);
+
 
             //menu switchase
-            string switchc = "switchc";
-            switch (switchc)
+
+            Console.WriteLine("1. Create new task");
+            Console.WriteLine("2. Show in progress tasks");
+            Console.WriteLine("3. Show tasks that have been done");
+
+            string userChoice = Console.ReadLine();
+            switch (userChoice)
             {
-                case "a":
-                    Console.WriteLine("x");
+                case "1":
+                    Console.Write("Write down your first task here: ");
+                    var userTodo = Console.ReadLine();
+                    Console.WriteLine(userTodo);
                     break;
-                case "b":
+                case "2":
                     Console.WriteLine("b");
                     break;
-                case "c":
+                case "3":
                     Console.WriteLine("c");
                     break;
                 default:
@@ -37,11 +42,13 @@ namespace TODO4SD
             }
 
             Console.ReadLine();
-        
+
+         
+
             //zrobic menu z pogladatem taskow
             // w menu opcja utworzenia nowego taska
             // taski maja zapisywac siew notatniku
-        
+
         }
     }
 }
